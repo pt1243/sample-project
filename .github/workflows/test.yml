@@ -32,7 +32,7 @@ jobs:
         pip install tox
     - name: Get environment name (Windows)
       if: ${{ matrix.os == 'windows-latest' }}
-      run: python -c 'x = \"${{ matrix.python-version }}\"; print(\"toxenv=py\"+x[0]+x[2:])' >> "$GITHUB_ENV"
+      run: python -c 'x = \"${{ matrix.python-version }}\"; print(\"toxenv=py\"+x[0]+x[2:])' | Out-File -FilePath $env:GITHUB_ENV -Append
     - name: Get environment name (Ubuntu)
       if: ${{ matrix.os == 'ubuntu-latest' }}
       run: python -c 'x = "${{ matrix.python-version }}"; print("toxenv=py"+x[0]+x[2:])' >> "$GITHUB_ENV"
