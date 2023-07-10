@@ -32,6 +32,6 @@ jobs:
     - name: Get environment name
       run: |
         echo ${{ matrix.python-version }}
-        python -c 'x = str(${{ matrix.python-version }}); print(x[0]+x[1:])'
+        python -c 'x = str(${{ matrix.python-version }}); print("py"+x[0]+x[2:])'
     # - name: Test with tox
     #   run: tox -e 
