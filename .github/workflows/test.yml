@@ -15,6 +15,7 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
         python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
@@ -30,13 +31,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install tox
     - name: Get environment name (Windows)
-      if: "${{ matrix.os }} == 'windows-latest'"
-      run: |
-        python -c 'x = \"${{ matrix.python-version }}\"; print(\"py\"+x[0]+x[2:])'
+      if: ${{ matrix.os == 'windows-latest'}}
+      run: python -c 'x = \"${{ matrix.python-version }}\"; print(\"py\"+x[0]+x[2:])'
     - name: Get environment name (Ubuntu)
       if: "${{ matrix.os }} == 'ubuntu-latest'"
-      run: |
-        python -c 'x = "${{ matrix.python-version }}"; print("py"+x[0]+x[2:])'
+      run: python -c 'x = "${{ matrix.python-version }}"; print("py"+x[0]+x[2:])'
 
     # - name: Test with tox
     #   run: tox -e 
