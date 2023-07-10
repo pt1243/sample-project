@@ -1,0 +1,32 @@
+[project]
+name = "my_package"
+description = "My Python package."
+version = "0.1.0"
+requires-python = ">=3.7"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+    "numpy"
+]
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools]
+packages = ["my_package"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=my_package"
+testpaths = [
+    "tests",
+]
+
+[tool.coverage.report]
+omit = ["__init__.py"]
+
+[tool.mypy]
+mypy_path = "my_package"
+warn_unused_configs = true
+
