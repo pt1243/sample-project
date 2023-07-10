@@ -27,6 +27,10 @@ testpaths = [
 omit = ["__init__.py"]
 
 [tool.mypy]
-mypy_path = "my_package"
+exclude = "tests"
 warn_unused_configs = true
+ignore_missing_imports = true
 
+[tool.black]
+line-length = 120
+extend-exclude = "tests"
