@@ -36,7 +36,5 @@ jobs:
     - name: Get environment name (Ubuntu)
       if: ${{ matrix.os == 'ubuntu-latest' }}
       run: python -c 'x = "${{ matrix.python-version }}"; print("toxenv=py"+x[0]+x[2:])' >> "$GITHUB_ENV"
-    - name: Print final environment
-      run: echo ${{ env.toxenv }}
-    # - name: Test with tox
-    #   run: tox -e 
+    - name: Run tests with tox
+      run: tox -e ${{ env.toxenv }}
