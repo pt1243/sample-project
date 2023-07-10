@@ -31,6 +31,6 @@ jobs:
         pip install tox
     - name: Get environment name
       run: |
-        python -c 'x = str(${{ matrix.python-version }}); print(chr(112)+chr(121)+x[0]+x[2:])' >> 
+        python -c 'x = str(${{ matrix.python-version }}); print(chr(112)+chr(121)+x[0]+x[2:])'
     # - name: Test with tox
     #   run: tox -e 
