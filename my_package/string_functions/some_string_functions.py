@@ -1,4 +1,4 @@
-__all__ = ['reverse_string', 'add_exclamation_mark']
+__all__ = ["reverse_string", "add_exclamation_mark"]
 
 
 def reverse_string(s: str) -> str:
@@ -6,4 +6,4 @@ def reverse_string(s: str) -> str:
 
 
 def add_exclamation_mark(s: str) -> str:
-    return s + '!'
+    return s + "!"
