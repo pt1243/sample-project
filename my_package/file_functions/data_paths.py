@@ -1,5 +1,11 @@
 import pathlib
-from typing import Final
+import sys
+
+
+if sys.version_info >= (3, 8):
+    from typing import Final
+else:
+    from typing_extensions import Final
 
 
 __all__ = ["ROOT_DIR", "DATA_DIR"]
