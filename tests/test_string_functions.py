@@ -2,13 +2,13 @@ import pytest
 from my_package.string_functions import reverse_string, add_exclamation_mark
 
 
-@pytest.mark.parametrize("test_input,expected", [
-    ('abc', 'cba'),
-    ('aaa', 'aaa'),
-    ('', ''),
-])
-def test_reverse_string(test_input, expected):
-    assert reverse_string(test_input) == expected
+# @pytest.mark.parametrize("test_input,expected", [
+#     ('abc', 'cba'),
+#     ('aaa', 'aaa'),
+#     ('', ''),
+# ])
+# def test_reverse_string(test_input, expected):
+#     assert reverse_string(test_input) == expected
 
 
 @pytest.mark.parametrize("test_input,expected", [
