@@ -6,6 +6,10 @@ if TYPE_CHECKING:  # pragma: no cover
     from _typeshed import StrPath
 
 
+for _ in range(3):
+    pass
+
+
 __all__ = ["simple_read"]
 
 
