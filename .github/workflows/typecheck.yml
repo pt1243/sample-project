@@ -14,6 +14,7 @@ concurrency:
 jobs:
   typecheck:
     runs-on: ubuntu-latest
+    name: Type check
 
     steps:
     - uses: actions/checkout@v3
