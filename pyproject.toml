@@ -18,7 +18,7 @@ build-backend = "setuptools.build_meta"
 packages = ["my_package"]
 
 [tool.pytest.ini_options]
-addopts = "--cov=my_package --cov-report html"
+addopts = "--cov=my_package --cov-append"
 testpaths = [
     "tests",
 ]
