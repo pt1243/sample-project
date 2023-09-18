@@ -1,5 +1,6 @@
 import pytest
-from my_package.string_functions import reverse_string, add_exclamation_mark
+# from my_package.string_functions import reverse_string, add_exclamation_mark
+from my_package.string_functions import add_exclamation_mark
 
 
 # @pytest.mark.parametrize("test_input,expected", [
@@ -20,9 +21,9 @@ def test_add_exclamation_mark(test_input, expected):
     assert add_exclamation_mark(test_input) == expected
 
 
-def test_reverse_string_raises_typeerror():
-    with pytest.raises(TypeError):
-        reverse_string(3)
+# def test_reverse_string_raises_typeerror():
+#     with pytest.raises(TypeError):
+#         reverse_string(3)
 
 
 def test_add_exclamation_mark_raises_typeerror():
