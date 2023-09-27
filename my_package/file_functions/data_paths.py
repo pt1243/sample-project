@@ -1,7 +1,6 @@
 from __future__ import annotations
 import pathlib
-import sys
-from typing import TYPE_CHECKING, Final
+from typing import Final
 
 
 __all__ = ["ROOT_DIR", "DATA_DIR"]
