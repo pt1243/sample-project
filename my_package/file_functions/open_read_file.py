@@ -10,5 +10,17 @@ __all__ = ["simple_read"]
 
 
 def simple_read(filename: StrPath) -> str:
-    with open(filename) as f:
+    """Opens a file and returns the contents.
+
+    Parameters
+    ----------
+    filename : file-like
+        The file-like object to open.
+
+    Returns
+    -------
+    str
+        The contents of the file.
+    """
+    with open(filename, "r") as f:
         return f.read().strip()
