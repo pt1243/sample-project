@@ -1,7 +1,0 @@
-flake8
-black
-tox>=3.8
-pytest
-pytest-cov
-coverage>=7
-mypy

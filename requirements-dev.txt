@@ -1,0 +1,8 @@
+black
+coverage>=7
+flake8
+mypy
+pre-commit
+pytest
+pytest-cov
+tox>=3.8
