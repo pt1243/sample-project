@@ -1,4 +1,4 @@
-black
+black>=23.7.0
 coverage>=7
 flake8
 mypy
