@@ -1,18 +1,20 @@
 [project]
 name = "my_package"
+authors = [
+    {name = "Jeremy Smith", email = "64465231+pt1243@users.noreply.github.com"},
+]
 description = "My Python package."
 version = "0.1.0"
 requires-python = ">=3.8"
 readme = "README.md"
 license = {file = "LICENSE"}
 dependencies = [
-    "numpy"
+    "numpy",
 ]
 
 [build-system]
 requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
-
 
 [tool.setuptools]
 packages = ["my_package"]
