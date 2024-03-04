@@ -6,19 +6,19 @@ before_script:
 tests:
   parallel:
     matrix:
-      - TOX-TEST-ENV: py38
+      - TOX_TEST_ENV: py38
         PYTHON_VERSION: "3.8"
-      - TOX-TEST-ENV: py39
+      - TOX_TEST_ENV: py39
         PYTHON_VERSION: "3.9"
-      - TOX-TEST-ENV: py310
+      - TOX_TEST_ENV: py310
         PYTHON_VERSION: "3.10"
-      - TOX-TEST-ENV: py311
+      - TOX_TEST_ENV: py311
         PYTHON_VERSION: "3.11"
-      - TOX-TEST-ENV: py312
+      - TOX_TEST_ENV: py312
         PYTHON_VERSION: "3.12"
     image: python:$PYTHON_VERSION
     script:
-      - tox -e $TOX-TEST-ENV
+      - tox -e $TOX_TEST_ENV
 
 lint:
   script:
