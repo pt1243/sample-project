@@ -16,9 +16,9 @@ tests:
         PYTHON_VERSION: "3.11"
       - TOX_TEST_ENV: py312
         PYTHON_VERSION: "3.12"
-    image: python:$PYTHON_VERSION
-    script:
-      - tox -e $TOX_TEST_ENV
+  image: python:$PYTHON_VERSION
+  script:
+    - tox -e $TOX_TEST_ENV
 
 lint:
   script:
