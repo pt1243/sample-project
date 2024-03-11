@@ -36,6 +36,7 @@ coverage:
   before_script: []
   script:
     - pip install pytest pytest-cov coverage
+    - pip install -r requirements.txt
     - coverage erase
     - pytest -q
     - coverage xml
